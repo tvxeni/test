@@ -1,0 +1,17 @@
+{{- $locations := .Site.Taxonomies.locations }}
+{{- if gt (len $locations) 0 }}
+<div class="sidecard">
+	<div class="widget widget-tags block">
+		<h3 class="widget__title">{{ T "widget-locations_title" }}</h3>
+		<div class="widget-tags__content widget__content">
+			{{- range $name, $taxonomy := $locations }}
+			{{- with $.Site.GetPage (printf "/locations/%s" $name) }}
+			<a class="widget-tags__link widget__link transition" href="{{ .RelPermalink }}" title="{{ .Title }}">
+				{{- .Title -}}{{- if $.Site.Params.widgets.tagsCounter }} ({{ $taxonomy.Count }}){{ end -}}
+			</a>
+			{{- end }}
+			{{- end }}
+		</div>
+	</div>
+</div>
+{{- end }}

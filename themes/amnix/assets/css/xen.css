@@ -1,0 +1,184 @@
+/*Questions*/
+
+.text-card {
+	font-size: .875rem;
+	color:
+		#666;
+}
+
+.xquote {
+
+	border: none;
+	line-height: 1.1em;
+	font-size: 0.9rem;
+}
+
+.xquote ol {
+	padding: 0;
+	list-style-type: none;
+}
+
+
+.border-botton {
+	width: 100%;
+	margin-top: 20px;
+	height: 44px;
+	font-size: 15px;
+	border: 1px solid #e6e6e6;
+	display: block;
+	background-color:
+		#e6e6e6;
+	color:
+		#2a2a2a;
+	border-radius: 5px;
+	line-height: 44px;
+	text-align: center;
+}
+
+
+
+
+
+.label-wrapper {
+	float: right;
+	width: 100%;
+}
+
+
+.widget__link {
+
+	text-transform: capitalize;
+}
+
+
+
+.sigline {
+	font-weight: bold;
+	font-size: 12px;
+	display: block;
+	margin-bottom: 0rem;
+}
+
+/* video */
+.post__content {
+	margin: -1rem -1rem 1rem;
+	margin-top: -1rem !important;
+}
+
+/* Programmes Labels */
+.label-wrapper {
+	/*margin-top: auto;*/
+	margin-bottom: 1rem;
+}
+
+/* External Links */
+.link-wrapper {
+	margin-top: auto;
+	margin-bottom: -1rem;
+}
+}
+
+.externallink {
+	display: block;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 14px;
+	cursor: pointer;
+
+	transition: color .15s ease-in;
+}
+
+
+.externallink:after {
+
+	display: inline-block;
+	margin-bottom: 2em;
+	margin-left: 0rem;
+	font-family: "FontAwesome";
+	content: "\f0c1";
+	font-size: .675em;
+}
+
+.fill-current {
+	fill: currentColor;
+}
+
+.externallink a:hover,
+a:visited,
+a:link,
+a:active {
+	text-decoration: none !important;
+	;
+}
+
+.programme_link {
+
+	margin-bottom: 0.75rem;
+	position: absolute;
+
+	text-transform: uppercase;
+	font-size: 10px;
+	letter-spacing: .2px;
+	color:
+		#767676;
+}
+
+
+/* Programmes Links */
+
+.label-wrapper {
+	display: flex;
+}
+
+
+.programme_link::before {
+	font-family: "FontAwesome";
+	content: "\f02e";
+	margin-right: 2px;
+	padding-right: 6px;
+}
+
+.v--poiskach::before {
+	color: #960c02;
+}
+
+.den--angela::before {
+	color: #e21a2b;
+}
+
+.do--suti:: {
+	color: #33ba91;
+}
+
+.jenskaia--polovina::before {
+	color: #cb669c;
+}
+
+.vstrecha::before {
+	color: #f1c85c;
+}
+
+.parsuna::before {
+	color: #db1c23;
+}
+
+.pesni::before {
+	color: #734c9b;
+}
+
+.zachem::before {
+	color: #42a5fa;
+}
+
+.linia::before {
+	color:
+		pink;
+}
+
+.ne--veru::before {
+	color: #767bb3;
+}
+
+.zavet::before {
+	color: #f06427;
+}

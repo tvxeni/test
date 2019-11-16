@@ -1,0 +1,26 @@
+<article class="post block">
+	{{- partial "post/post_featured.html" (dict "page" . "link" .RelPermalink) }}
+	<header class="post__header">
+
+
+
+		{{- with .Summary | markdownify }}
+		<div class="post__content">{{ .  }} </div>
+		{{- end }}
+
+		<h2 class="post__title post__title--summary"><a class="post__title-link"
+				href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+
+	</header>
+
+
+	<div class="sigline"> {{ .Params.locations| markdownify  }}</div>
+
+
+	<p class='text-card'>{{.Description| markdownify }}</p>
+
+
+	<div class="link-wrapper"> {{ .Params.externallink | markdownify  }}</div>
+	<div class='label-wrapper'>{{ .Params.programme | markdownify  }}</div>
+
+</article>
