@@ -2,7 +2,6 @@
  * Based on Bootstrap Reboot v4.3.1 (https://github.com/twbs/bootstrap/blob/1770691b339b/dist/css/bootstrap-reboot.css)
  * Licensed under MIT
 */
-
 *,
 *::before,
 *::after {
@@ -189,7 +188,7 @@ code {
 	word-wrap: break-word;
 }
 
-a>code {
+a > code {
 	color: inherit;
 }
 

@@ -6,6 +6,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
 	background-color: #f7f7f7;
 	-webkit-font-smoothing: antialiased;
 }
@@ -25,7 +27,11 @@ abbr {
 blockquote {
 	padding: 1rem;
 	background: #fff9dd;
-	border: 1px solid rgba(0, 0, 0, 0.08);
+	border: 1px solid rgba(0, 0, 0, .08);
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
 }
 
 blockquote footer {
@@ -93,6 +99,12 @@ th {
 	background-color: #33333a;
 }
 
+.js .header__inner {
+	display: flex;
+	align-items: center;
+	padding: .6875rem .875rem .6875rem 1.375rem;
+}
+
 .logo {
 	font-weight: 600;
 	color: #fff;
@@ -103,35 +115,17 @@ th {
 	text-decoration: none;
 }
 
-.main-menu {
-	display: block;
+.main-nav {
+	margin-left: auto;
 	font-size: 0;
-	font-weight: 700;
 }
 
 .main-nav__btn {
-	position: absolute;
-	top: .625rem;
-	right: 1rem;
 	padding: .5rem;
-	font-size: 0;
 	cursor: pointer;
 	background-color: #33333a;
 	border: 0;
 	fill: #9f9fab;
-}
-
-.main-nav__btn:focus,
-.main-nav__btn:hover {
-	color: #000;
-}
-
-.main-nav__btn-icon {
-	font-size: 1rem;
-}
-
-.main-nav__btn .icon-menu__burger {
-	display: inline;
 }
 
 .main-nav__btn .icon-menu__x {
@@ -147,15 +141,26 @@ th {
 }
 
 .main-nav__list {
+	padding: 0;
+	margin: 0;
 	font-size: 0;
+	list-style: none;
+}
+
+.no-js .main-nav__list {
+	margin-top: 1rem;
 }
 
 .main-nav__item {
-	padding: .5rem 1.375rem;
+	padding: .5rem 0;
 	font-size: 1rem;
 	font-weight: 600;
 	color: #bbb;
 	border-bottom: 1px solid #5b5b67;
+}
+
+.js .main-nav__item {
+	padding: .5rem 1.375rem;
 }
 
 .main-nav__item:first-child {
@@ -179,12 +184,6 @@ th {
 	color: #fff;
 }
 
-.main-nav__list {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-
 .no-js .main-nav__btn {
 	display: none;
 }
@@ -205,12 +204,23 @@ th {
 }
 
 @media (min-width: 860px) {
+	.js .header__inner {
+		display: block;
+		padding: 1rem 1.375rem;
+	}
+
 	.logo {
 		display: inline-block;
 	}
 
-	.js .main-nav__list {
+	.js .main-nav {
+		margin-left: auto;
+	}
+
+	.js .main-nav__list,
+	.no-js .main-nav__list {
 		display: block;
+		margin-top: 0;
 	}
 
 	.main-nav__btn {
@@ -221,6 +231,7 @@ th {
 		display: inline-block;
 	}
 
+	.js .main-nav__item,
 	.main-nav__item {
 		display: inline-block;
 		padding: 0 .5rem;
@@ -233,7 +244,7 @@ th {
 	}
 
 	.main-nav__list.main-nav__list--active {
-		position: initial;
+		position: inherit;
 		border: 0;
 	}
 }
@@ -319,8 +330,7 @@ th {
 }
 
 .post__featured {
-	min-height: 1px;
-	/* Workaround for IE11 flexbox img height bug https://github.com/philipwalton/flexbugs/issues/75 */
+	min-height: 1px; /* Workaround for IE11 flexbox img height bug https://github.com/philipwalton/flexbugs/issues/75 */
 	margin: -1rem -1rem 1rem;
 }
 
@@ -464,8 +474,7 @@ th {
 
 .post__related {
 	flex-basis: 100%;
-	flex-shrink: 1;
-	/* ie */
+	flex-shrink: 1; /* ie */
 	width: 100%;
 	margin: .25rem;
 }

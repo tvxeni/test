@@ -8,16 +8,13 @@
 
 # Widgets
 - id: widget-recent_title
-  translation: Последнее
+  translation: Recent Posts
 
 - id: widget-categories_title
-  translation: Телепередачи
+  translation: Categories
 
 - id: widget-tags_title
-  translation: Ключевые слова
-
-- id: widget-locations_title
-  translation: Страны
+  translation: Tags
 
 # Share
 - id: share-caption
@@ -28,7 +25,7 @@
 
 # Footer
 - id: footer_credits
-  translation: " <https://golang.org/\" rel=\"nofollow noopener\" target=\"_blank\"></a>."
+  translation: "Powered by <a href=\"https://gohugo.io/\" rel=\"nofollow noopener\" target=\"_blank\">Hugo</a> and <a href=\"https://github.com/vimux/amnix\" rel=\"nofollow noopener\" target=\"_blank\">Amnix</a> theme."
 
 # "No posts" empty state
 - id: empty_title
